@@ -35,10 +35,13 @@ You can also run all services in the background (detached mode) by adding the -d
 
 Redis cache data is peristed inside a volume by default.
 
-In order to entirely shutdown the stack and remove all persisted data, use the following Docker Compose command:
+To shutdown the stack **without** removing all persisted data, use the following Docker Compose command:
+```
+$ docker-compose down
+```
+
+In order to entirely shutdown the stack and remove all persisted data, you can add the `-v` flag to the above command:
 
 ```
 $ docker-compose down -v
 ```
-
-
