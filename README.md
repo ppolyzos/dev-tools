@@ -6,3 +6,4 @@ A collection of tools, links & recipes that runs in docker and can help you duri
 
 * [Redis & Redis-Commander](/redis/README.md)
 * [Portainer.io](/portainer/README.md)
+* [RabbitMQ](/rabbitmq/README.md)

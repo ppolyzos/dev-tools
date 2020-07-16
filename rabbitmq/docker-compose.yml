@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_dev
+    environment: 
+      - RABBITMQ_ERLANG_COOKIE=q#d*R67P9JT#ISn6
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitmq_data:/rabbitmq
+
+volumes:
+  rabbitmq_data:
+    driver: local
