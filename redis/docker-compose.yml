@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - 6379:6379
+    volumes:
+      - "redis-data:/bitnami/redis/data"
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+
+      # block ui access with username / password
+      # - HTTP_USER=admin
+      # - HTTP_PASSWORD=P@ssw0rd!!!
+    ports:
+      - 8081:8081
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:
