@@ -27,6 +27,10 @@ You can also run all services in the background (detached mode) by adding the -d
 
 > You must rebuild the stack images with docker-compose build whenever you switch branch or update the version of an already existing stack
 
+* Redis Connection string: `localhost:6379`
+* Dashboard available at [http://localhost:8081](http://localhost:8081)
+
+
 # Cleanup 
 
 Redis cache data is peristed inside a volume by default.
