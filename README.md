@@ -34,8 +34,19 @@ or by starting the tool from root folder:
 $ docker-compose -f <folder_tool>/docker-compose.yml up
 ```
 
-> You can also start all services in the background (detached mode) by adding the `-d` flag to the above command.
+#### Example
+```
+# To start Redis
+$ cd redis
+$ docker-compoose up
+```
+or 
+```
+# Start redis by running
+$ docker-compose -f redis/docker-compose.yml up 
+```
 
+> You can also start all services in the background (detached mode) by adding the `-d` flag to the above command.
 
 ### Cleanup
 
