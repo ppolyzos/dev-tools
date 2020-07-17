@@ -18,7 +18,7 @@ List of docker recipes to help you start:
 * [Portainer.io](/portainer/README.md)
 * [RabbitMQ](/rabbitmq/README.md)
 * [Lenses Box](/lenses/README.md)
-* [ELK](https://github.com/deviantony/docker-elk) [External]
+* [ELK](/elk/README.md)
 
 ## Usage
 
