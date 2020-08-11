@@ -7,13 +7,14 @@
 * Official page: [RabbitMQ](https://www.rabbitmq.com/)
 * Documentation: [RabbitMQ/documentation/](https://www.rabbitmq.com/documentation.html)
 * Bitnami image for more advanced scenarios [bitnami-docker-rabbitmq](https://github.com/bitnami/bitnami-docker-rabbitmq)
-* Local Dashboard: [localhost:9000](http://localhost:15672/)
+* Local Dashboard: [localhost:15672](http://localhost:15672/)
 
 # Requirements
 
 By default, the stack exposes the following ports:
 * 5672: Node port. Default: 5672
 * 15672: Management port. Default: 15672
+* credentials: `admin` /  `admin`
 
 # Usage
 
@@ -28,8 +29,9 @@ You can also run all services in the background (detached mode) by adding the `-
 > You must rebuild the stack images with docker-compose build whenever you switch branch or update the version of an already existing stack
 
 * Dashboard available at [http://localhost:15672](http://localhost:15672)
+> To access dasbhoard you can use default credentials which are: `admin` / `admin`. 
 
-> The first time you access the [dashboard](http://localhost:15672) you have to create a user, which remains available next time you start the tool, unless you perform a full cleanup.
+> You can change them in [docker-compose](docker-compose.yml) file by updating `RABBITMQ_DEFAULT_USER` and `RABBITMQ_DEFAULT_PASS` properties. Credentials remain available also the next time you start the tool, unless you perform a full cleanup.
 
 
 # Cleanup 
