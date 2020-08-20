@@ -6,8 +6,6 @@ services:
     container_name: lenses_dev
     env_file: 
       - lenses.env
-    environment: 
-      - ADV_HOST=127.0.0.1
     ports:
       - 3030:3030
       - 9092:9092

@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
+    image: elasticsearch:${ELK_VERSION}
     container_name: elk_elasticsearch_dev
     volumes:
       - elasticsearch:/usr/share/elasticsearch/data
@@ -19,7 +19,7 @@ services:
       - elk
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:${ELK_VERSION}
+    image: logstash:${ELK_VERSION}
     container_name: elk_logstash_dev
     ports:
       - 5000:5000/tcp
@@ -33,7 +33,7 @@ services:
       - elasticsearch
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:${ELK_VERSION}
+    image: kibana:${ELK_VERSION}
     container_name: elk_kibana_dev
     ports:
       - 5601:5601
