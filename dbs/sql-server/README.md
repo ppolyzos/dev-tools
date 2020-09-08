@@ -47,16 +47,16 @@ $ sudo docker cp AdventureWorks2019.bak sql1:/var/opt/mssql/backup
 #### 5.1 Run sqlcmd inside the container to list out logical file names and paths inside the backup.
 ```
 $ sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
-   -U SA -P '<YourStrong@Passw0rd>' \
-   -Q 'RESTORE FILELISTONLY FROM DISK = "/var/opt/mssql/backup/AdventureWorks2019.bak"' \
-   | tr -s ' ' | cut -d ' ' -f 1-2
+  -U SA -P '<YourStrong@Passw0rd>' \
+  -Q 'RESTORE FILELISTONLY FROM DISK = "/var/opt/mssql/backup/AdventureWorks2019.bak"' \
+  | tr -s ' ' | cut -d ' ' -f 1-2
 ```
 
 #### 5.2 Restore database 
 ```
 $ sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
-   -S localhost -U SA -P '<YourStrong@Passw0rd>' \
-	 -Q 'RESTORE DATABASE [AdventureWorks] FROM DISK = "/var/opt/mssql/backup/AdventureWorks2019.bak" WITH FILE = 1, MOVE "AdventureWorks2017" TO "/var/opt/mssql/data/AdventureWorks.mdf", MOVE "AdventureWorks2017_log" TO "/var/opt/mssql/data/AdventureWorks_log.ldf", NOUNLOAD, STATS = 5'
+  -S localhost -U SA -P '<YourStrong@Passw0rd>' \
+  -Q 'RESTORE DATABASE [AdventureWorks] FROM DISK = "/var/opt/mssql/backup/AdventureWorks2019.bak" WITH FILE = 1, MOVE "AdventureWorks2017" TO "/var/opt/mssql/data/AdventureWorks.mdf", MOVE "AdventureWorks2017_log" TO "/var/opt/mssql/data/AdventureWorks_log.ldf", NOUNLOAD, STATS = 5'
 ```
 
 # Cleanup 
