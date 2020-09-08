@@ -1,0 +1,23 @@
+version: '3.2'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
+    container_name: sql1
+    user: root
+    volumes: 
+      - sqlserver:/usr/share/sqlserver/data
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "<YourStrong@Passw0rd>"
+    networks:
+      - sql
+
+networks:
+  sql:
+    driver: bridge
+  
+volumes:
+  sqlserver:
