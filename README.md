@@ -41,7 +41,7 @@ $ docker-compose -f <folder_tool>/docker-compose.yml up
 ```
 # To start Redis
 $ cd redis
-$ docker-compoose up
+$ docker-compose up
 ```
 or 
 ```
