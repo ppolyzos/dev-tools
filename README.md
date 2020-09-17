@@ -22,6 +22,7 @@ List of docker recipes to help you start:
 
 ### Databases
 * [SQL Server 2019](/sql-server/README.md)
+* [MongoDB](/mongo/README.md)
 
 ## Usage
 
