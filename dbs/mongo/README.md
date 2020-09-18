@@ -8,7 +8,7 @@ For more info please visit MongoDB [official page](https://www.mongodb.com/)
 
 By default, the stack exposes the following ports:
 * [27017](http://localhost:27017): default port
-* Default credentials: `root` / `<YourStrong@Passw0rd>`
+* Default credentials: `root` / `<YourStrongPassw0rd>`
 
 # Usage
 
@@ -22,7 +22,7 @@ You can also run all services in the background (detached mode) by adding the `-
 
 
 * Default Connection available at [http://localhost:27017](http://localhost:27017)
-* Default credentials: `root` / `<YourStrong@Passw0rd>`
+* Default credentials: `root` / `<YourStrongPassw0rd>`
 
 ## Connect to Mongo DB
 
@@ -32,7 +32,7 @@ You can also run all services in the background (detached mode) by adding the `-
 $ docker exec -it mongo_dev bash
 
 # connect to mongodb
-$ mongo admin -u root -p <YourStrong@Passw0rd>
+$ mongo admin -u root -p <YourStrongPassw0rd>
 ```
 
 Sample commands to play with:
