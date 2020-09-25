@@ -21,8 +21,8 @@ List of docker recipes to help you start:
 * [ELK](/elk/README.md)
 
 ### Databases
-* [SQL Server 2019](/sql-server/README.md)
-* [MongoDB](/mongo/README.md)
+* [SQL Server 2019](/dbs/sql-server/README.md)
+* [MongoDB](/dbs/mongo/README.md)
 
 ## Usage
 

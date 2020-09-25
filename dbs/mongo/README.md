@@ -32,7 +32,7 @@ You can also run all services in the background (detached mode) by adding the `-
 $ docker exec -it mongo_dev bash
 
 # connect to mongodb
-$ mongo admin -u root -p <YourStrongPassw0rd>
+$ mongo admin -u root -p "<YourStrongPassw0rd>"
 ```
 
 Sample commands to play with:
