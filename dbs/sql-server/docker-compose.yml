@@ -4,6 +4,7 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
     container_name: sql1
+    restart: always
     user: root
     volumes: 
       - sqlserver:/usr/share/sqlserver/data
