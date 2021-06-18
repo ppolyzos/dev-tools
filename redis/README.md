@@ -8,12 +8,14 @@ Redis is an advanced key-value cache and store. It is often referred to as a dat
 * [Redis](https://redis.io/)
 * [Bitmani Redis](https://github.com/bitnami/bitnami-docker-redis) docker image
 * [Redis commander](https://www.npmjs.com/package/redis-commander) is a Redis web management written in node.js
+* [RedisInsights](https://redislabs.com/redis-enterprise/redis-insight/) is an alternative web management tool for your redis db
 
 # Requirements
 
 By default, the stack exposes the following ports:
 * 6379: Redis server
 * 8081: Redis commander management ui
+* 8001: RedisInsights
 
 # Usage
 
@@ -28,7 +30,16 @@ You can also run all services in the background (detached mode) by adding the -d
 > You must rebuild the stack images with docker-compose build whenever you switch branch or update the version of an already existing stack
 
 * Redis Connection string: `localhost:6379`
-* Dashboard available at [http://localhost:8081](http://localhost:8081)
+* Redis Commander Dashboard available at [http://localhost:8081](http://localhost:8081)
+* Redis Insights Dashboard available at [http://localhost:8001](http://localhost:8001)
+
+### Redis Insights setup
+When you open Redis Insights Dashboard for the first time at [http://localhost:8001](http://localhost:8001) you are prompt to connect to your redis database.
+To do so setup the following:
+* host -> redis
+* port -> 6379
+* name -> redis
+* username / password -> according to your setup
 
 
 # Cleanup 
